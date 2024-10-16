@@ -43,6 +43,13 @@ jobs:
       run: |
         npm install
         npm run build --if-present
+
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: frontend-build
+        path: dist/
       
 
     
