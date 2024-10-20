@@ -1,5 +1,5 @@
 // src/apiService.js
-const API_URL = "http://localhost:8000/api";  // Update to your Django API URL
+const API_URL = import.meta.env.VITE_BACKEND_URL; // Update to your Django API URL
 
 export const fetchStudents = async () => {
   const response = await fetch(`${API_URL}/students/`);  // Ensure trailing slash
@@ -47,7 +47,7 @@ export const enrollInCourse = async (studentId, courseId) => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ student_id: studentId, course_id: courseId })  // Ensure correct body format
   });
-  
+
   if (!response.ok) {
     throw new Error("Failed to enroll student in course");  // Add error handling
   }

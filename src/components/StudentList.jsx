@@ -9,6 +9,7 @@ const StudentList = () => {
 
   useEffect(() => {
     loadStudents();
+    
   }, []);
 
   const loadStudents = async () => {
