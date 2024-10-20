@@ -55,5 +55,5 @@ jobs:
           curl -X POST \
             https://api.github.com/repos/POCBackendPython/dispatches \
             -H "Accept: application/vnd.github.everest-preview+json" \
-            -u ${{ secrets.ACTIONS_KEY }} \
+            -u ${{ secrets.ACTION_KEY }} \
             --data '{"event_type": "trigger_backend"}'
