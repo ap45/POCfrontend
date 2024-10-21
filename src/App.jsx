@@ -9,6 +9,9 @@ function App() {
   return (
     <Router>
       <div>
+        <div>
+          Yo! Welcome to the APP, just a basic APP, so enjoy
+        </div>
         <nav>
           <ul>
             <li><Link to="/students">Students</Link></li>
